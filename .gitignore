@@ -1,0 +1,26 @@
+# Compiler files
+cache/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (if using npm packages)
+node_modules/
+
+# Broadcast files with sensitive data
+broadcast/**/dry-run/
+
+# Coverage
+lcov.info
+coverage/
