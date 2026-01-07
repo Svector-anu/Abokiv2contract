@@ -1,66 +1,56 @@
-## Foundry
+# Abokiv2 Smart Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This directory contains the Foundry project for the Abokiv2 smart contract. The contract is deployed on Base mainnet and provides decentralized exchange order functionality through Uniswap V3.
 
-Foundry consists of:
+## Quick Start
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```
+forge build
+forge test
 ```
 
-### Test
+## Project Structure
 
-```shell
-$ forge test
+```
+abokiv2-fresh/
+├── src/
+│   └── Abokiv2.sol          # Main contract
+├── script/
+│   └── Deploy.s.sol         # Deployment script
+├── test/
+│   └── Abokiv2.t.sol        # Test suite
+├── lib/
+│   └── forge-std/           # Foundry standard library
+├── broadcast/               # Deployment transaction records
+├── foundry.toml             # Foundry configuration
+└── .env.example             # Environment template
 ```
 
-### Format
+## Configuration
 
-```shell
-$ forge fmt
+Copy `.env.example` to `.env` and fill in the required values before deployment.
+
+## Deployment
+
+The contract has been deployed to Base mainnet. See the parent README for full documentation.
+
+## Testing
+
+Run all tests:
+```
+forge test
 ```
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
+Run with verbosity:
+```
+forge test -vvvv
 ```
 
-### Anvil
-
-```shell
-$ anvil
+Run specific test:
+```
+forge test --match-test test_CreateOrder
 ```
 
-### Deploy
+## License
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+MIT
