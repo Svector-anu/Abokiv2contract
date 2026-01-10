@@ -259,6 +259,7 @@ The contract emits the following events for off chain tracking:
 | `FeeTierUpdated` | Emitted when fee tier support changes |
 | `DefaultFeeTierUpdated` | Emitted when default fee tier changes |
 
+did an audit find the full details about commit here  https://github.com/Svector-anu/Abokiv2contract/commit/e840cc1086a20bfc115604b7bbf080ddb66cecef#diff-bac2a3206914c55b0d31923b9d101f6eabfe6eddaedb37da63a7d61d70e71b47
 ## License
 
 This project is licensed under the MIT License.
