@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+// Audited with thirdwebAI
 pragma solidity ^0.8.18;
 
 interface IERC20 {
